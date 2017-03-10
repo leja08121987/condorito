@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Login</title>
+        <title>Jugador</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -53,7 +53,7 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Ingresa al registro de jugadores</h3>
+                        			<h3>Registro de usuarios</h3>
                             		<p>Ingresa los datos:</p>
                         		</div>
                         		<div class="form-top-right">
@@ -63,17 +63,46 @@
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Nombres</label>
-			                        	<input type="text" name="form-username" placeholder="Nombres..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="form-username">NombresCompletos</label>
+			                        	<input type="text" name="form-username" placeholder="Nombres y apellidos..." class="form-username form-control" id="form-username">
 			                        </div>
                                     <div class="form-group">
-			                    		<label class="sr-only" for="form-username">Apellidos</label>
-			                        	<input type="text" name="form-username" placeholder="Apellidos..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="form-username">Cedula</label>
+			                        	<input type="text" name="form-username" placeholder="Cedula..." class="form-username form-control" id="form-username">
 			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Direccion</label>
-			                        	<input type="password" name="form-password" placeholder="Direccion..." class="form-password form-control" id="form-password">
+                                    <div class="form-group">
+			                    		<label class="sr-only" for="form-username">Telefono</label>
+			                        	<input type="text" name="form-username" placeholder="Telefono..." class="form-username form-control" id="form-username">
 			                        </div>
+                                    <div class="form-group">
+			                    		<label class="sr-only" for="form-username">Direccion</label>
+			                        	<input type="text" name="form-username" placeholder="Direccion..." class="form-username form-control" id="form-username">
+			                        </div>
+                                    <div class="form-group">
+			                    		<label class="sr-only" for="form-username">TipoUsuario</label>
+			                        	<input type="text" name="form-username" placeholder="Tipo de usuario..." class="form-username form-control" id="form-username">
+			                        </div>
+                                    <div class="row">
+                                    <div class='col-sm-5'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker2'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $('#datetimepicker2').datetimepicker({
+                                                locale: 'ru'
+                                            });
+                                        });
+                                    </script>
+                                </div>
+
+
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
                                     <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>

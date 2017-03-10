@@ -53,8 +53,8 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Ingresa al control de jugadores</h3>
-                            		<p>Ingresa usuario y contraseña:</p>
+                        			<h3>REPORTES</h3>
+                            		<p>Generar reporte usuario/carrera:</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-lock"></i>
@@ -63,13 +63,10 @@
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Usuario</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="form-username">NombreUsuario</label>
+			                        	<input type="text" name="form-username" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
 			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Contraseña</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-			                        </div>
+
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
                                     <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
