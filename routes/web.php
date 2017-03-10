@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::group(['prefix'=> 'condorito'], function () {
+
+    Route::get ('registroJugadores',[
+        'as' => 'registroJugadores',
+        'uses'=> 'Lugarcontroller@jugadores'
+    ]);
+
 });
