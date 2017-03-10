@@ -22,4 +22,8 @@ Route::group(['prefix'=> 'condorito'], function () {
         'uses'=> 'Lugarcontroller@jugadores'
     ]);
 
+Route::get ('registroCarrera',[
+        'as' => 'registroCarrera',
+        'uses'=> 'Lugarcontroller@carrera'
+    ]);
 });

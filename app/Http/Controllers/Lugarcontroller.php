@@ -14,4 +14,8 @@ public function jugadores()
 {
  return view('jugadores');
 }
+    public function carrera()
+{
+ return view('carrera');
+}
 }
