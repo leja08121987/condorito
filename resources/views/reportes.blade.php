@@ -70,7 +70,9 @@
 			                        	<label class="sr-only" for="form-password">Contraseña</label>
 			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
-			                        <button type="button" class="btn"  onClick="location.href='{{route('inicio')}}'">Ingresar</button>
+			                        <button type="submit" class="btn">Ingresar</button>
+                                    <br> </br>
+                                    <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 			                    </form>
 		                    </div>
                         </div>

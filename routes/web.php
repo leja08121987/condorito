@@ -36,4 +36,9 @@ Route::get ('registroCarrera',[
         'as' => 'jugadorCarrera',
         'uses'=> 'Lugarcontroller@jugadorCarrera'
     ]);
+
+     Route::get ('reporte',[
+        'as' => 'reporte',
+        'uses'=> 'Lugarcontroller@reporte'
+    ]);
 });

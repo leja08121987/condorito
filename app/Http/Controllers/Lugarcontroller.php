@@ -10,7 +10,6 @@ class Lugarcontroller extends Controller
 {
  return view('index');
 }
-    {
     public function inicio()
 {
  return view('inicio');
@@ -18,14 +17,18 @@ class Lugarcontroller extends Controller
 
 public function jugadores()
 {
- return view('jugadores');
+ return view('registroJugadores');
 }
     public function carrera()
 {
- return view('carrera');
+ return view('registroCarrera');
 }
     public function jugadorCarrera()
 {
  return view('jugadorCarrera');
+}
+    public function reporte()
+{
+ return view('reportes');
 }
 }
