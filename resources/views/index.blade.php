@@ -63,11 +63,11 @@
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Username</label>
+			                    		<label class="sr-only" for="form-username">Usuario</label>
 			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<label class="sr-only" for="form-password">Contraseña</label>
 			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
 			                        <button type="submit" class="btn">Ingresar</button>

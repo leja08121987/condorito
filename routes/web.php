@@ -17,6 +17,11 @@ Route::get('/', function () {
 
 Route::group(['prefix'=> 'condorito'], function () {
 
+    Route::get ('inicio',[
+        'as' => 'inicio',
+        'uses'=> 'Lugarcontroller@inicio'
+    ]);
+
     Route::get ('registroJugadores',[
         'as' => 'registroJugadores',
         'uses'=> 'Lugarcontroller@jugadores'
@@ -25,5 +30,10 @@ Route::group(['prefix'=> 'condorito'], function () {
 Route::get ('registroCarrera',[
         'as' => 'registroCarrera',
         'uses'=> 'Lugarcontroller@carrera'
+    ]);
+
+    Route::get ('jugadorCarrera',[
+        'as' => 'jugadorCarrera',
+        'uses'=> 'Lugarcontroller@jugadorCarrera'
     ]);
 });
