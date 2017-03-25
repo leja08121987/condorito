@@ -14,8 +14,17 @@ class CreateUsuariocarreraTable extends Migration
     public function up()
     {
         Schema::create('usuariocarrera', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('idUsuarioCarrera');
             $table->timestamps();
+
+
+            $table->string('idUsers')->unsigned();
+            $table->foreign('idUsers')->references('idUsers')->on('users');
+
+
+            $table->string('idCarrera')->unsigned();
+            $table->foreign('idCarrera')->references('idCarrera')->on('carrera');
+
         });
     }
 
@@ -28,4 +37,6 @@ class CreateUsuariocarreraTable extends Migration
     {
         Schema::dropIfExists('usuariocarrera');
     }
+
+
 }

@@ -14,11 +14,11 @@ class CreateCarreraTable extends Migration
     public function up()
     {
         Schema::create('carrera', function (Blueprint $table) {
-            $table->increments('id');
-            $table->varchar('nombreCarrera');
-            $table->varchar('ruta');
-            $table->varchar('totalRecorrido');
-            $table->varchar('dificultad');
+            $table->increments('idCarrera');
+            $table->string('nombreCarrera');
+            $table->string('ruta');
+            $table->string('totalRecorrido');
+            $table->string('dificultad');
             $table->date('fechaCompetencia');
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','cedula','telefono','direccion','fechaIngreso'
     ];
 
     /**
@@ -26,4 +26,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function tipousuario()
+    {
+    return $this->hasOne('App\tipousuario');
+    }
+
+    public function usuariocarrera()
+    {
+    return $this->hasOne('App\usuariocarrera');
+    }
+
 }
