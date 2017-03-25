@@ -67,12 +67,12 @@
 			                        	<input type="text" name="form-username" placeholder="Nombres y apellidos..." class="form-username form-control" id="form-username">
 			                        </div>
                                     <div class="form-group">
-			                    		<label class="sr-only" for="form-username">Cedula</label>
-			                        	<input type="text" name="form-username" placeholder="Cedula..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="form-cedula">Cedula</label>
+			                        	<input type="text" name="form-cedula" placeholder="Cedula..." class="form-cedula form-control" id="form-cedula">
 			                        </div>
                                     <div class="form-group">
-			                    		<label class="sr-only" for="form-username">Telefono</label>
-			                        	<input type="text" name="form-username" placeholder="Telefono..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="form-telefono">Telefono</label>
+			                        	<input type="text" name="form-telefono" placeholder="Telefono..." class="form-telefono form-control" id="form-telefono">
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-username">Direccion</label>
