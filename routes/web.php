@@ -50,3 +50,12 @@ Route::get ('registroCarrera',[
     ]);
 
 
+
+    Route::POST ('registrarcarrera',[
+        'as' => 'registrarcarrera',
+        'uses'=> 'carreracontroller@crearcarrera'
+    ]);
+
+
+
+

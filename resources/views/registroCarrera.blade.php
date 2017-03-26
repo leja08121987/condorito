@@ -60,43 +60,39 @@
                         			<i class="fa fa-lock"></i>
                         		</div>
                             </div>
+
+                         {!!Form::open(['route'=>'registrarcarrera','method'=>'POST'])!!}
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">NombreCarrera</label>
-			                        	<input type="text" name="form-username" placeholder="Nombre Carrera..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="nombreCarrera" placeholder="Nombre Carrera..." class="form-username form-control" id="form-username" required>
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-username">Ruta</label>
-			                        	<input type="text" name="form-username" placeholder="Nombre ruta..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="ruta" placeholder="Nombre ruta..." class="form-username form-control" id="form-username">
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-username">Recorrido</label>
-			                        	<input type="text" name="form-username" placeholder="Total recorrido..." class="form-username form-control" id="form-username">
+			                        	<input type="number" name="totalRecorrido" placeholder="Total recorrido..." class="form-username form-control" id="form-username">
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-username">Dificultad</label>
-			                        	<input type="text" name="form-username" placeholder="Dificultad carrera..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="dificultad" placeholder="Dificultad carrera..." class="form-username form-control" id="form-username">
 			                        </div>
 
                                     <div class="row">
                                     <div class='col-sm-5'>
                                         <div class="form-group">
                                             <div class='input-group date' id='datetimepicker2'>
-                                                <input type='text' class="form-control" />
+                                                <input type='date' class="form-control"  name="fechaCompetencia" />
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <script type="text/javascript">
-                                        $(function () {
-                                            $('#datetimepicker2').datetimepicker({
-                                                locale: 'ru'
-                                            });
-                                        });
-                                    </script>
+
                                 </div>
 
 			                        <button type="submit" class="btn">Ingresar</button>
