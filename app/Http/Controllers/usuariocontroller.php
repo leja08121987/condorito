@@ -14,7 +14,8 @@ class usuariocontroller extends Controller
 
 public function crearusuario(Request $request)
 {
-$input = $request->all();
+
+ $input = $request->all();
  User::create($input);
  dd("USUARIO CREADO");
 
