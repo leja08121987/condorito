@@ -42,3 +42,11 @@ Route::get ('registroCarrera',[
         'uses'=> 'Lugarcontroller@reporte'
     ]);
 });
+
+
+    Route::POST ('registrarusuario',[
+        'as' => 'registrarusuario',
+        'uses'=> 'usuariocontroller@crearusuario'
+    ]);
+
+

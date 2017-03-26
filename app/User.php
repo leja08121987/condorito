@@ -13,9 +13,14 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array
+
+
      */
+
+    protected $table ="users";
+
     protected $fillable = [
-        'name', 'email', 'password','cedula','telefono','direccion','fechaIngreso'
+        'name', 'email', 'password','cedula','telefono','direccion','fechaIngreso','idTipoUsuario'
     ];
 
     /**
@@ -29,12 +34,13 @@ class User extends Authenticatable
 
     public function tipousuario()
     {
-    return $this->hasOne('App\tipousuario');
+    return $this->belongsTo('App\tipousuario');
     }
+
 
     public function usuariocarrera()
     {
-    return $this->hasOne('App\usuariocarrera');
+    return $this->belongsTo('App\usuariocarrera');
     }
 
 }

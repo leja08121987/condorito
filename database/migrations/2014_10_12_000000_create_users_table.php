@@ -28,8 +28,6 @@ class CreateUsersTable extends Migration
             $table->string('idTipoUsuario')->unsigned();
             $table->foreign('idTipoUsuario')->references('idTipoUsuario')->on('tipousuario');
 
-            $table->string('idUsuarioCarrera')->unsigned();
-            $table->foreign('idUsuarioCarrera')->references('idUsuarioCarrera')->on('usuariocarrera');
 
 
         });

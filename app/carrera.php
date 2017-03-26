@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class carrera extends Model
 {
-
+   protected $table ="carrera";
 
     protected $fillable = [
         'idCarrera','nombreCarrera','ruta','totalRecorrido','dificultad','fechaCompetencia',
@@ -14,7 +14,7 @@ class carrera extends Model
     ];
            public function usuariocarrera()
         {
-        return $this->belongsTo('App\usuariocarrera');
+        return $this->hasOne('App\usuariocarrera');
         }
 
 }

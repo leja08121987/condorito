@@ -60,48 +60,64 @@
                         			<i class="fa fa-lock"></i>
                         		</div>
                             </div>
+
+
+
+
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                    {!!Form::open(['route'=>'registrarusuario','method'=>'POST'])!!}
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">NombresCompletos</label>
-			                        	<input type="text" name="form-username" placeholder="Nombres y apellidos..." class="form-username form-control" id="form-username">
+			                        	<input type="text" placeholder="Nombres y apellidos..." class="form-username form-control" id="form-username" name="name" required>
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-cedula">Cedula</label>
-			                        	<input type="text" name="form-cedula" placeholder="Cedula..." class="form-cedula form-control" id="form-cedula">
+			                        	<input type="number" name="cedula" placeholder="Cedula..." class="form-cedula form-control" id="form-cedula" required>
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-telefono">Telefono</label>
-			                        	<input type="text" name="form-telefono" placeholder="Telefono..." class="form-telefono form-control" id="form-telefono">
+			                        	<input type="number" name="telefono" placeholder="Telefono..." class="form-telefono form-control" id="form-telefono" required>
 			                        </div>
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-username">Direccion</label>
-			                        	<input type="text" name="form-username" placeholder="Direccion..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="direccion" placeholder="Direccion..." class="form-username form-control" id="form-username" required>
 			                        </div>
+
+
+                                    <div class="form-group">
+			                    		<label class="sr-only" for="form-username">password</label>
+			                        	<input type="password" name="password" placeholder="password" class="form-username form-control" id="form-username" required>
+			                        </div>
+
+
+
+                                    <div class="form-group">
+			                    		<label class="sr-only" for="form-username">email</label>
+			                        	<input type="text" name="email" placeholder="email" class="form-username form-control" id="form-username" required>
+			                        </div>
+
+
                                     <div class="form-group">
 			                    		<label class="sr-only" for="form-username">TipoUsuario</label>
-			                        	<input type="text" name="form-username" placeholder="Tipo de usuario..." class="form-username form-control" id="form-username">
+
+                                        <select  name="idTipoUsuario">
+                                            <option value="2">administrador</option>
+                                            <option value="1">usuario</option>
+                                        </select>
 			                        </div>
                                     <div class="row">
                                     <div class='col-sm-5'>
                                         <div class="form-group">
                                             <div class='input-group date' id='datetimepicker2'>
-                                                <input type='text' class="form-control" />
+                                                <input type='date' class="form-control"  name="fechaIngreso" required/>
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <script type="text/javascript">
-                                        $(function () {
-                                            $('#datetimepicker2').datetimepicker({
-                                                locale: 'ru'
-                                            });
-                                        });
-                                    </script>
-                                </div>
 
+                                </div>
 
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
