@@ -6,6 +6,23 @@ use Illuminate\Http\Request;
 
 class Lugarcontroller extends Controller
 {
+
+
+
+
+
+public function crearcarrerausuario(Request $request)
+{
+ dd("saSasa");
+}
+
+
+
+
+
+
+
+
     public function index()
 {
  return view('index');
@@ -25,10 +42,15 @@ public function jugadores()
 }
     public function jugadorCarrera()
 {
- return view('jugadorCarrera');
+ return view('JUGADORCARRERAA');
 }
     public function reporte()
 {
  return view('reportes');
 }
+
+
+
+
+
 }

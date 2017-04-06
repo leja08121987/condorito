@@ -5,15 +5,15 @@
 <?php
 $corredores= DB::select('select * from users');
 $carreras= DB::select('select * from carrera');
-
 ?>
+
 
     <head>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jugador/Carrera</title>
+        <title>Login</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -38,9 +38,6 @@ $carreras= DB::select('select * from carrera');
 
     </head>
 
-
-
-
     <body>
 
         <!-- Top content -->
@@ -63,54 +60,45 @@ $carreras= DB::select('select * from carrera');
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Control de jugadores y carreras</h3>
-                            		<p>crea informacion:</p>
+                        			<h3>Control de carreras</h3>
+                            		<p>Ingresa la carrera:</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-lock"></i>
                         		</div>
                             </div>
+
+                         {!!Form::open(['route'=>'jugadorcarrara','method'=>'POST'])!!}
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
-			                    	<div class="form-group">
 
-                                    <div class="container">
-                                <div class="row">
-                                    <div class='col-sm-5'>
-                                        <div class="form-group">
-
-                                          {!!Form::open(['route'=>'CarreraJugador','method'=>'get'])!!}
-                                            <h1>sdsadasdsssssssssss</h1>
-                                        <select  name="idTipoUsuario">
+                                        <select  name="idUsers">
                                                @foreach($corredores as $jugador)
                                                 <option value={{$jugador->idUsers}}>{{$jugador->name}}</option>
                                                 @endforeach
                                         </select>
 
 
-                                        <select  name="idTipoUsuario">
+                                        <select  name="idCarrera">
                                                @foreach($carreras as $carrera)
                                                 <option value={{$carrera->idCarrera}}>{{$carrera->nombreCarrera}}</option>
                                                 @endforeach
                                         </select>
 
-                                            <button type="submit" class="btn">Ingresar</button>
+                                    <div class="row">
+                                    <div class='col-sm-5'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker2'>
 
-                                            </form>
+
+
+
                                             </div>
                                         </div>
                                     </div>
 
-                                    <script type="text/javascript">
-                                        $(function () {
-                                            $('#datetimepicker2').datetimepicker({
-                                                locale: 'ru'
-                                            });
-                                        });
-                                    </script>
                                 </div>
-                            </div>
 
+			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
                                     <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 			                    </form>

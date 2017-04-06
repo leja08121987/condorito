@@ -57,5 +57,17 @@ Route::get ('registroCarrera',[
     ]);
 
 
+    Route::POST ('jugadorcarrara',[
+        'as' => 'jugadorcarrara',
+        'uses'=> 'carreracontroller@jugadorcarrara'
+    ]);
+
+
+  Route::POST ('reporte',[
+        'as' => 'reporte',
+        'uses'=> 'carreracontroller@reporte'
+    ]);
+
+
 
 

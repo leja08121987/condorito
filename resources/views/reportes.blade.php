@@ -61,11 +61,26 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                      {!!Form::open(['route'=>'reporte','method'=>'POST'])!!}
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">NombreUsuario</label>
-			                        	<input type="text" name="form-username" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="usuario" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
 			                        </div>
+
+
+                                	<label>Fecha inicio</label>
+                                	<div class="form-group">
+			                        	<input type="date" name="inicio" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
+			                        </div>
+
+
+                                <label>Fecha fin</label>
+                                	<div class="form-group">
+			                        	<input type="date" name="fin" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
+			                        </div>
+
+
+
 
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
