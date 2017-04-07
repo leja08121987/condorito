@@ -49,6 +49,10 @@ public function jugadores()
  return view('reportes');
 }
 
+        public function login()
+{
+ return view('index');
+}
 
 
 

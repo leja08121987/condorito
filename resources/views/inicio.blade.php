@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+
+@if(Session::get('nombre'))
+@else
+<script type="text/javascript">
+   window.location.href="{{route('login')}}";
+</script>
+@endif
+
+
 <html lang="en">
   <head>
     <!-- Basic Page Needs
@@ -68,6 +78,7 @@
             <li><a href="{{route('registroCarrera')}}" class="page-scroll">Registro carreras</a></li>
             <li><a href="{{route('jugadorCarrera')}}" class="page-scroll">Registro Jugador-carrera</a></li>
             <li><a href="{{route('reportevista')}}" class="page-scroll">Reportes</a></li>
+            <li><a href="{{route('salir')}}" class="page-scroll">Salir</a></li>
 
             </ul>
         </div><!-- /.navbar-collapse -->

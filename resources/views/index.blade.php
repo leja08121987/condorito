@@ -21,7 +21,7 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('archivos/login/ico/apple-touch-icon-144-precomposed.png')}}">
@@ -51,7 +51,7 @@
                     </div>
 
                     	{!!Form::open(['route'=>'loguinentrada','method'=>'POST']) !!}
-
+<input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
@@ -67,13 +67,14 @@
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Usuario</label>
-			                        	<input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="username"  required placeholder="Username..." class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Contraseña</label>
-			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        	<input type="password" name="password" required placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
-			                        <button type="button" class="btn"  onClick="location.href='{{route('inicio')}}'">Ingresar</button>
+                                    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+			                        <button type="submit" class="btn ">Ingresar</button>
 			                    </form>
 		                    </div>
                         </div>

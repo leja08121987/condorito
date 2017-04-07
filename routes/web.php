@@ -37,6 +37,11 @@ Route::get ('registroCarrera',[
         'uses'=> 'Lugarcontroller@jugadorCarrera'
     ]);
 
+        Route::get ('login',[
+        'as' => 'login',
+        'uses'=> 'Lugarcontroller@login'
+    ]);
+
 
 });
 
@@ -80,7 +85,12 @@ Route::POST ('listar',[
 
 Route::POST ('loguinentrada',[
         'as' => 'loguinentrada',
-        'uses'=> 'carreracontroller@loguinentrada'
+        'uses'=> 'LoginController@login'
+    ]);
+
+Route::get ('salir',[
+        'as' => 'salir',
+        'uses'=> 'LoginController@salir'
     ]);
 
 
