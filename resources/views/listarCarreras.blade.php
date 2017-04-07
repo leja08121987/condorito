@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+@if(Session::get('nombre'))
+@else
+<script type="text/javascript">
+   window.location.href="{{route('login')}}";
+</script>
+@endif
+
 <html lang="en">
 
     <head>

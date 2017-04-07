@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+@if(Session::get('nombre'))
+@else
+<script type="text/javascript">
+   window.location.href="{{route('login')}}";
+</script>
+@endif
+
 
 <?php
 $corredores= DB::select('select * from users');
