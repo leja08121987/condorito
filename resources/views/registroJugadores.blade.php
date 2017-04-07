@@ -112,6 +112,7 @@
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
                                     <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
+
 			                    </form>
 		                    </div>
                         </div>

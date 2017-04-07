@@ -37,10 +37,7 @@ Route::get ('registroCarrera',[
         'uses'=> 'Lugarcontroller@jugadorCarrera'
     ]);
 
-     Route::get ('reporte',[
-        'as' => 'reporte',
-        'uses'=> 'Lugarcontroller@reporte'
-    ]);
+
 });
 
 
@@ -49,6 +46,10 @@ Route::get ('registroCarrera',[
         'uses'=> 'usuariocontroller@crearusuario'
     ]);
 
+     Route::get ('reporte',[
+        'as' => 'reportevista',
+        'uses'=> 'carreracontroller@reportevista'
+    ]);
 
 
     Route::POST ('registrarcarrera',[
@@ -68,6 +69,19 @@ Route::get ('registroCarrera',[
         'uses'=> 'carreracontroller@reporte'
     ]);
 
+
+
+Route::POST ('listar',[
+        'as' => 'listar',
+        'uses'=> 'carreracontroller@listar'
+    ]);
+
+
+
+Route::POST ('loguinentrada',[
+        'as' => 'loguinentrada',
+        'uses'=> 'carreracontroller@loguinentrada'
+    ]);
 
 
 

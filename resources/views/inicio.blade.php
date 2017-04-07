@@ -67,7 +67,7 @@
             <li><a href="{{route('registroJugadores')}}" class="page-scroll">Registro jugadores</a></li>
             <li><a href="{{route('registroCarrera')}}" class="page-scroll">Registro carreras</a></li>
             <li><a href="{{route('jugadorCarrera')}}" class="page-scroll">Registro Jugador-carrera</a></li>
-            <li><a href="{{route('reporte')}}" class="page-scroll">Reportes</a></li>
+            <li><a href="{{route('reportevista')}}" class="page-scroll">Reportes</a></li>
 
             </ul>
         </div><!-- /.navbar-collapse -->

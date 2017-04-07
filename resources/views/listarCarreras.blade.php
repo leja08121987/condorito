@@ -33,60 +33,51 @@
 
     <body>
 
+
+        <?php
+
+        $consultafecha = \DB::select("select * from users inner join usuariocarrera ON (users.idUsers = usuariocarrera.idUsers)
+                                    inner join carrera ON (usuariocarrera.idCarrera=carrera.idCarrera) where name ='$usuario' and
+                                     carrera.fechaCompetencia  between '$inicio' and '$fin'");
+
+
+        ?>
         <!-- Top content -->
         <div class="top-content">
 
             <div class="inner-bg">
                 <div class="container">
+
+
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Jugadores</strong> Login </h1>
-                            <div class="description">
-                            	<!-- <p>
-	                            	This is a free responsive login form made with Bootstrap.
-	                            	Download it on <a href="http://azmind.com"><strong>AZMIND</strong></a>, customize and use it as you like!
-                            	</p>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h3>REPORTES</h3>
-                            		<p>Generar reporte usuario/carrera:</p>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-lock"></i>
-                        		</div>
-                            </div>
+
+
                             <div class="form-bottom">
-			                      {!!Form::open(['route'=>'reporte','method'=>'POST'])!!}
+			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">NombreUsuario</label>
-			                        	<input type="text" name="usuario" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
+
+
+			                    		<label class="sr-only" for="form-username">NombreCarrera</label>
+
+			                        </div>
+                                    @foreach($consultafecha as $user1)
+                                    <div class="form-group">
+			                    	    <center><h1>nombre Carrera:{{$user1->nombreCarrera}}</h1></center>
+                                        <h2>Fecha:{{$user1->fechaCompetencia}}</h2>
+                                        <h2>Dificultad:{{$user1->dificultad}}</h2>
+                                        <h2>Total recorrido:{{$user1->totalRecorrido}}</h2>
+                                        <h2>Ruta:{{$user1->ruta}}</h2>
+                                        <br>
+
+
 			                        </div>
 
-
-                                	<label>Fecha inicio</label>
-                                	<div class="form-group">
-			                        	<input type="date" name="inicio" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
-			                        </div>
+                                 	@endforeach
+                                </div>
 
 
-                                <label>Fecha fin</label>
-                                	<div class="form-group">
-			                        	<input type="date" name="fin" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
-			                        </div>
-
-
-
-
-			                        <button type="submit" class="btn">Ingresar</button>
-                                    <br> </br>
-
+                                    <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 			                    </form>
-                         <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 		                    </div>
                         </div>
                     </div>
@@ -96,11 +87,14 @@
             </div>
 
         </div>
+
+
         <!-- Javascript -->
         <script src="{{asset('archivos/login/js/jquery-1.11.1.min.js')}}"></script>
         <script src="{{asset('archivos/login/bootstrap/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('archivos/login/js/jquery.backstretch.min.js')}}"></script>
         <script src="{{asset('archivos/login/js/scripts.js')}}"></script>
+
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
