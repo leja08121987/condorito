@@ -11,7 +11,7 @@ class tipousuario extends Model
  protected $table ="tipousuario";
 
   protected $fillable = [
-        'name', 'email', 'password','cedula','telefono','direccion','fechaIngreso'
+        'name', 'email', 'password','cedula','telefono','direccion','fechaIngreso','idTipoUsuario'
     ];
 
 
