@@ -75,6 +75,8 @@
 			                        </div>
                                     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 			                        <button type="submit" class="btn ">Ingresar</button>
+                                    <br> </br>
+                                     <button type="submit" class="btn" onClick="location.href='{{route('registroJugadores')}}'">Crear Usuario</button>
 			                    </form>
 		                    </div>
                         </div>
