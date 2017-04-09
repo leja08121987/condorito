@@ -19,11 +19,9 @@ class CreateUsuariocarreraTable extends Migration
 
 
             $table->string('idUsers')->unsigned();
-            $table->foreign('idUsers')->references('idUsers')->on('users');
-
 
             $table->string('idCarrera')->unsigned();
-            $table->foreign('idCarrera')->references('idCarrera')->on('carrera');
+
 
         });
     }
