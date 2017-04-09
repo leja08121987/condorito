@@ -34,7 +34,7 @@ class User extends Authenticatable
 
     public function tipousuario()
     {
-    return $this->belongsTo('App\tipousuario');
+    return $this->hasOne('App\tipousuario');
     }
 
 

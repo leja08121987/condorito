@@ -19,7 +19,7 @@ class tipousuario extends Model
     public function User()
     {
     //return $this->hasOne('App\User');
-       return $this->hasOne('App\User', 'foreign_field');
+       return $this->belongsTo('App\User','foreign_field','local_field');
 
     }
 
