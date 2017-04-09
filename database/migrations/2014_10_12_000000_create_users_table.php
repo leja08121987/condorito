@@ -14,6 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            $table->integer('id')->nullable();
             $table->increments('idUsers');
             $table->string('name');
             $table->string('cedula');
