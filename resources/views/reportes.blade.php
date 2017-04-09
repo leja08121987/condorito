@@ -87,14 +87,11 @@
 			                        	<input type="date" name="fin" placeholder="usuriario que genera el reporte..." class="form-username form-control" id="form-username">
 			                        </div>
 
-
-
-
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
-
+                                        <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 			                    </form>
-                         <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
+
 		                    </div>
                         </div>
                     </div>

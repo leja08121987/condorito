@@ -79,13 +79,10 @@
 
 
 			                        </div>
-
                                  	@endforeach
-                                </div>
-
-
-                                    <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
-			                    </form>
+                                    </div>
+                                  </form>
+                                            <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 		                    </div>
                         </div>
                     </div>

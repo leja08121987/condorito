@@ -67,8 +67,8 @@ $carreras= DB::select('select * from carrera');
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Control de carreras</h3>
-                            		<p>Ingresa la carrera:</p>
+                        			<h3>JUGADORES-CARRERAS</h3>
+                            		<p>Seleccione el jugador y la carrera:</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-lock"></i>
