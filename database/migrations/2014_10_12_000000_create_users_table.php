@@ -26,7 +26,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
 
             $table->string('idTipoUsuario')->unsigned();
-            $table->foreign('idTipoUsuario')->references('idTipoUsuario')->on('tipousuario');
 
 
 
