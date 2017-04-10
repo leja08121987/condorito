@@ -114,6 +114,7 @@
 			                        <button type="submit" class="btn">Ingresar</button>
                                     <br> </br>
                                     <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 			                    </form>
 		                    </div>

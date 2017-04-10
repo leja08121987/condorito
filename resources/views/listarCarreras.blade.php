@@ -81,7 +81,10 @@
 			                        </div>
                                  	@endforeach
                                     </div>
-                                  </form>
+
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                                </form>
                                             <button type="submit" class="btn" onClick="location.href='{{route('inicio')}}'">Regresar</button>
 		                    </div>
                         </div>
