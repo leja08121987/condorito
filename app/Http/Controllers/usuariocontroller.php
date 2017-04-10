@@ -30,7 +30,7 @@ class usuariocontroller extends Controller
         $persona->fechaIngreso=$request->fechaIngreso;
         $persona->password=bcrypt($request->password);
         $persona->save();
-        return view('index');
+        return view('registroJugadores');
     }
 
 
