@@ -14,6 +14,7 @@ class CreateUsuariocarreraTable extends Migration
     public function up()
     {
         Schema::create('usuariocarrera', function (Blueprint $table) {
+            $table->integer('id')->nullable();
             $table->increments('idUsuarioCarrera');
             $table->timestamps();
 
